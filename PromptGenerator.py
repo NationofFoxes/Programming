@@ -23,9 +23,9 @@ def verb():
         return "has"
     elif rv == "go":
         return "goes"
-    elif rv[-2:-1] in esVerbs or rv[-1] == "x":
+    elif rv[-2:] in esVerbs or rv[-1] == "x":
         return rv + "es"
-    elif rv[-2] in constonants and rv[-1] == "y":
+    elif rv[-2] not in "aeiou" and rv[-1] == "y":
         length = len(rv)
         return rv[1:length-1] + "ies"
     else:
